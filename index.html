@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <!-- Link para o arquivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link para o kit de ícones Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Minha To-Do List Version 1.0</h1>
+  </header>
+
+  <!-- Container principal da To-Do List -->
+  <section class="todo-container">
+
+    <!-- Container para os status das tarefas -->
+    <div class="status-container">
+      <!-- Coluna de Tarefas -->
+      <div class="status" id="tarefas">
+        <h2>Tarefas</h2>
+        <ul id="tarefas-pendentes" class="lista" draggable="true"></ul>
+      </div>
+      <!-- Coluna Em Andamento -->
+      <div class="status" id="em-andamento">
+        <h2>Em Andamento</h2>
+        <ul id="tarefas-andamento" class="lista" draggable="true"></ul>
+      </div>
+      <!-- Coluna Em Revisão -->
+      <div class="status" id="em-revisao">
+        <h2>Em Revisão</h2>
+        <ul id="tarefas-progresso" class="lista" draggable="true"></ul>
+      </div>
+      <!-- Coluna Concluído -->
+      <div class="status" id="concluido">
+        <h2>Concluído</h2>
+        <ul id="tarefas-concluidas" class="lista" draggable="true"></ul>
+      </div>
+    </div>
+    <!-- Botão para abrir o modal de adicionar nova tarefa -->
+    <button id="open-modal">Adicionar Tarefa</button>
+  </section>
+
+  <!-- Modal para Adicionar Nova Tarefa -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Nova Tarefa</h2>
+      <input type="text" id="nova-tarefa" placeholder="Digite sua tarefa...">
+      <label for="data-entrega">Data do Evento</label>
+      <input type="date" id="data-entrega" placeholder="Data de entrega">
+      <label for="hora-alarme">Hora do Alarme</label>
+      <input type="time" id="hora-alarme">
+      <button id="adicionar-tarefa"><i class="fas fa-plus"></i> Adicionar</button>
+    </div>
+  </div>
+
+  <!-- Lista de eventos agendados com alarme -->
+  <section class="eventos-container">
+    <h2>Eventos Agendados</h2>
+    <ul id="lista-eventos"></ul>
+  </section>
+
+  <footer>
+    <p>Feito com 💻 por Professora Laryssa e contribuição do Dev. André Abrantes>
+  </footer>
+
+  <!-- Link para o arquivo JavaScript externo -->
+  <script src="script.js"></script>
+
+</body>
+</html>
